@@ -1,3 +1,11 @@
+# ReactJS List 01
+
+The basic features of this list includes:
+ - Adding items
+ - Deleting items
+
+A simple list built with ReactJS for learning purposes only.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
