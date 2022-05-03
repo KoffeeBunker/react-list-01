@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+:root {
+  --black: rgb(0, 0, 0);
+  --gray-100: rgb(24, 24, 24);
+  --gray-200: rgb(35, 35, 35);
+  --gray-300: rgb(45, 45, 45);
+  --gray-400: rgb(55, 55, 55);
+  --gray-500: rgb(65, 65, 65);
+  --gray-600: rgb(73, 73, 73);
+  --light-gray-100: rgb(220, 220, 220);
+  --light-gray-200: rgb(200, 200, 200);
+  --light-gray-300: rgb(179, 179, 179);
+  --white: rgb(244, 244, 244);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body, .app {
+  background: var(--gray-100);
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+  width: 250px;
+  height: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+header span {
+  width: 200px;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span input {
+  border-radius: 4px 0 0 4px;
+  border: 1px solid var(--gray-200);
+  background: none;
+  outline: none;
+  padding: 5px 8px;
+  color: var(--white);
+}
+
+span input:focus {
+  border: 1px solid var(--white);
+}
+
+header button, span button {
+  border-radius: 4px;
+  border: 1px solid var(--white);
+  background: var(--white);
+  outline: none;
+  padding: 5px 8px;
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+span button {
+  border-radius: 0 4px 4px 0;
+}
+
+span button:hover, header button:hover {
+  background-color: var(--light-gray-200);
+  cursor: pointer;
 }

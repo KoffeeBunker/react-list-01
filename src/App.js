@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Item from './components/Item';
 
 function App() {
+  const [inputText, setInputText] = useState('');
+  const [items, setItems] = useState([]);
+
+  const inputHandler = () => {
+    setItems([
+      ...items,
+      {name: inputText, id: Math.random() * 10}
+    ])
+    setInputText('');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header>
+        <span>
+          <input 
+            type="text" 
+            value={inputText}
+            id="todo-input" 
+            onChange={e => setInputText(e.target.value)} 
+            placeholder="Buy milk"
+          />
+          <button onClick={inputHandler}>+</button>
+        </span>
+        <button>Filter</button>
+      </header>     
+      <main>
+        {items.map(item => <Item items={items} setItems={setItems} name={item.name} id={item.id} />)}
+      </main>
     </div>
   );
 }

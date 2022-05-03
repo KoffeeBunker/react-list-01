@@ -1,0 +1,38 @@
+.todo__item {
+  height: 30px;
+  width: 250px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  color: var(--white);
+  text-align: center;
+  margin: 5px 0 5px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__item:hover {
+  border: 1px solid var(--gray-400);
+  cursor: pointer;
+}
+
+.todo__item p {
+  padding-left: 10px;
+}
+
+.todo__item button {
+  border-radius: 0 4px 4px 0;
+  border: 1px solid var(--white);
+  background: var(--white);
+  outline: none;
+  padding: 5px 8px;
+  height: 100%;
+  box-sizing: border-box;
+  width: 30px;
+}
+
+.todo__item button:hover {
+  cursor: pointer;
+  background-color: var(--light-gray-200);
+}
